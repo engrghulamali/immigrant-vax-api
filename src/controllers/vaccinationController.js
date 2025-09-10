@@ -9,7 +9,6 @@ export const validateCreate = [
   body('lotNumber').optional().isString(),
   body('provider').optional().isString(),
   body('country').optional().isString(),
-  body('documentUrl').optional().isURL(),
   body('notes').optional().isString().isLength({ max: 1000 })
 ];
 
@@ -21,7 +20,6 @@ export const validateUpdate = [
   body('lotNumber').optional().isString(),
   body('provider').optional().isString(),
   body('country').optional().isString(),
-  body('documentUrl').optional().isURL(),
   body('notes').optional().isString().isLength({ max: 1000 })
 ];
 

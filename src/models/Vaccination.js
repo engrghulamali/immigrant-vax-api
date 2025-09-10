@@ -9,7 +9,6 @@ const VaccinationSchema = new mongoose.Schema(
     lotNumber: { type: String },
     provider: { type: String },
     country: { type: String },
-    documentUrl: { type: String },
     notes: { type: String }
   },
   { timestamps: true }
