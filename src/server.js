@@ -3,7 +3,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
-
+import authRoutes from './routes/authRoutes.js';
 import profileRoutes from './routes/profileRoutes.js';
 import vaccinationRoutes from './routes/vaccinationRoutes.js';
 import reminderRoutes from './routes/reminderRoutes.js';
@@ -22,6 +22,7 @@ app.use(morgan('dev'));
 app.get('/health', (req, res) => res.json({ ok: true }));
 
 // API routes
+app.use('/api/auth', authRoutes);
 app.use('/api/profile', profileRoutes);
 app.use('/api/vaccinations', vaccinationRoutes);
 app.use('/api/reminders', reminderRoutes);
